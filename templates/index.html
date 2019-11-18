@@ -103,11 +103,13 @@
                 {% else %}
                   <img class="img-fluid" src="{% static 'img/banner/hero-banner.png' %}" alt="">
                 {% endif %}
-                <ul class="thumb-info">
-                  <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
-                  <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at }}</a></li>
-                  <li><a href="#"><i class="ti-themify-favicon"></i>{{ post.comments_amount }} Comments</a></li>
-                </ul>
+                <div style="max-width: 550px;">
+                  <ul class="thumb-info" >
+                    <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
+                    <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at }}</a></li>
+                    <li><a href="#"><i class="ti-themify-favicon"></i>{{ post.comments_amount }} Comments</a></li>
+                  </ul>
+                </div>
               </div>
               <div class="details mt-20">
                 <h3>{{ post.title }}</h3>
