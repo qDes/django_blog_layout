@@ -61,9 +61,9 @@
             <div class="single-recent-blog-post">
               <div class="thumb">
                 {% if post.image_url %}
-                  <img class="img-fluid" src="{{ post.image_url }}" alt="">
+                  <a href="{% url 'post_detail' slug=post.slug %}"><img class="img-fluid" src="{{ post.image_url }}" alt=""></a>
                 {% else %}
-                  <img class="img-fluid" src="{% static 'img/banner/hero-banner.png' %}" alt="">
+                  <a href="{% url 'post_detail' slug=post.slug %}"><img class="img-fluid" src="{% static 'img/banner/hero-banner.png' %}" alt=""> </a>
                 {% endif %}
                 <div style="max-width: 550px;">
                   <ul class="thumb-info" >
@@ -74,7 +74,7 @@
                 </div>
               </div>
               <div class="details mt-20">
-                <h3>{{ post.title }} </h3>
+                <a href="{% url 'post_detail' slug=post.slug %}"><h3>{{ post.title }} </h3></a>
                 <p>{{ post.text|truncatechars:200 }}</p>
                 <a class="button" href="{% url 'post_detail' slug=post.slug %}"> Read More <i class="ti-arrow-right"></i></a>
               </div>
